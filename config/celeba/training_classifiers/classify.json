@@ -1,0 +1,85 @@
+{
+    "root_path":"./checkpoints/target_model",
+
+    "dataset":{
+      "name":"celeba",
+      "train_file_path":"./datasets/celeba/meta/trainset.txt",
+      "test_file_path":"./datasets/celeba/meta/testset.txt",
+      "img_path": "./datasets/celeba/img_align_celeba",
+      "model_name":"FaceNet",
+      "mode":"reg",
+      "n_classes":1000,
+      "device":"cuda"
+    },
+
+    "VGG16":{
+      "epochs":50,
+      "batch_size":64,
+      "instance":4,
+      "lr":1e-2,
+      "momentum":0.9,
+      "weight_decay":1e-4,
+      "gamma":0.2,
+      "adjust_epochs":[20, 35],
+      "resume":""
+    },
+
+    "FaceNet":{
+      "epochs":30,
+      "batch_size":64,
+      "instance":4,
+      "lr":1e-2,
+      "momentum":0.9,
+      "weight_decay":1e-4,
+      "adjust_lr":[1e-3, 1e-4],
+      "adjust_epochs":[15, 25],
+      "resume":"./checkpoints/backbone/backbone_ir50_ms1m_epoch120.pth"
+    },
+
+    "FaceNet_all":{
+      "epochs":100,
+      "batch_size":64,
+      "instance":4,
+      "lr":1e-2,
+      "momentum":0.9,
+      "weight_decay":1e-4,
+      "adjust_lr":[1e-3, 1e-4],
+      "adjust_epochs":[15, 25],
+      "resume":"./checkpoints/backbone/backbone_ir50_ms1m_epoch120.pth"
+    },
+
+    "FaceNet64":{
+      "epochs":50,
+      "batch_size":64,
+      "lr":1e-2,
+      "momentum":0.9,
+      "weight_decay":1e-4,
+      "lrdecay_epoch":10,
+      "lrdecay":0.1,
+      "resume":"./checkpoints/backbone/backbone_ir50_ms1m_epoch120.pth"
+    },
+
+    "IR152":{
+      "epochs":40,
+      "batch_size":64,
+      "lr":1e-2,
+      "momentum":0.9,
+      "weight_decay":1e-4,
+      "lrdecay_epoch":10,
+      "lrdecay":0.1,
+      "resume":"./checkpoints/backbone/Backbone_IR_152_Epoch_112_Batch_2547328_Time_2019-07-13-02-59_checkpoint.pth"
+    },
+
+    "IR50":{
+      "epochs":40,
+      "batch_size":64,
+      "lr":1e-2,
+      "momentum":0.9,
+      "weight_decay":1e-4,
+      "lrdecay_epoch":10,
+      "lrdecay":0.1,
+      "resume":"./checkpoints/backbone/ir50.pth"
+    }
+  }
+  
+  

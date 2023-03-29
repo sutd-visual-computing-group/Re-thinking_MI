@@ -1,0 +1,33 @@
+{
+    "root_path": "./attack_results/",
+    "dataset":{
+        "model_name": "VGG16",
+        "test_file_path": "./datasets/celeba/meta/testset.txt",
+        "name": "ffhq",
+        "img_path": "./datasets/celeba/img_align_celeba",
+        "n_classes":1000,
+        "fid_real_path": "./datasets/celeba/meta/celeba_target_300ids.npy",
+        "KNN_real_path": "./datasets/celeba/meta/fea_target_300ids.npy",
+        "p_reg_path": "./checkpoints/p_reg"
+    },
+
+    "train":{
+        "model_types": "VGG16,efficientnet_b0,efficientnet_b1,efficientnet_b2",
+        "cls_ckpts": "checkpoints/target_model/target_ckp/VGG16_88.26.tar,./checkpoints/aug_ckp/ffhq/VGG16_efficientnet_b0_0.02_1.0/VGG16_efficientnet_b0_kd_0_20.pt,./checkpoints/aug_ckp/ffhq/VGG16_efficientnet_b1_0.02_1.0/VGG16_efficientnet_b1_kd_0_20.pt,./checkpoints/aug_ckp/ffhq/VGG16_efficientnet_b2_0.02_1.0/VGG16_efficientnet_b2_kd_0_20.pt",      
+        "num_seeds": 5,
+        "Nclass": 300,
+        "gan_model_dir": "./checkpoints/GAN",
+        "eval_model": "FaceNet",
+        "eval_dir": "./checkpoints/target_model/target_ckp/FaceNet_95.88.tar"
+        },
+
+    "attack":{
+        "method": "kedmi",
+        "variant": "L_logit",
+        "iters_mi": 2400,
+        "lr": 0.02,
+        "lam": 1.0,
+        "same_z":"",
+        "eval_metric": "fid, acc, knn"
+    }
+}

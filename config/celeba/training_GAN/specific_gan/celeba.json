@@ -1,0 +1,47 @@
+{
+    "root_path":"./checkpoints/GAN",
+    
+    "dataset":{
+        "gan_file_path": "./datasets/celeba/meta/ganset.txt",
+        "model_name": "VGG16",
+        "name": "celeba",
+        "img_gan_path": "./datasets/celeba/img_align_celeba",
+        "n_classes":1000
+    },
+
+    "train":{
+        "model_types": "VGG16",      
+        "num_seeds": 5,
+        "Nclass": 300
+    },
+
+    "FaceNet64":{
+        "lr": 0.0002,
+        "batch_size": 64,
+        "z_dim": 100,
+        "epochs": 120,
+        "n_critic": 5,
+        "unlabel_weight": 10,
+        "cls_ckpts": "./checkpoints/download/target_model/target_ckp/FaceNet64_88.50.tar"
+    },
+
+    "VGG16":{
+        "lr": 0.0002,
+        "batch_size": 64,
+        "z_dim": 100,
+        "epochs": 120,
+        "n_critic": 5,
+        "unlabel_weight": 10,
+        "cls_ckpts": "./checkpoints/download/target_model/target_ckp/VGG16_87.10_allclass.tar"
+    },
+
+    "IR152":{
+        "lr": 0.0002,
+        "batch_size": 64,
+        "z_dim": 100,
+        "epochs": 120,
+        "n_critic": 5,
+        "unlabel_weight": 10,
+        "cls_ckpts": "./checkpoints/download/target_model/target_ckp/IR152_91.16.tar"
+    }
+}
