@@ -97,7 +97,11 @@ After attack, use the same configuration file to run the following command line 
 python evaluation.py --configs path/to/config.json
 ```
 
-
+## Acknowledgements
+We gratefully acknowledge the following works:
+- Knowledge-Enriched-Distributional-Model-Inversion-Attacks: https://github.com/SCccc21/Knowledge-Enriched-DMI
+- EfficientNet (Pytorch): https://pytorch.org/vision/stable/models/efficientnet.html
+- Experiment Tracking with Weights and Biases : https://www.wandb.com/
 
 
 ## Reference
