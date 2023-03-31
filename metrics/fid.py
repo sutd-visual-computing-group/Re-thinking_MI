@@ -168,7 +168,7 @@ def gen_samples(G, E, save_dir, improved_gan, n_iden=5, n_img=5):
     if not os.path.exists(img_ids_path + 'full.npy'):
         for loop in range(1):
             for i in range(n_iden): #300 ides 
-                for j in range(n_img): #30 images/iden
+                for j in range(n_img): #5 images/iden
                     z, iden = get_z(improved_gan, save_dir, loop, i, j)
                     z = torch.clamp(z, -1.0, 1.0).float()
                     total_gen = total_gen + z.shape[0]
