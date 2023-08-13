@@ -6,6 +6,7 @@
         "gan_file_path": "./datasets/celeba/meta/ganset.txt",
         "name": "celeba",
         "img_path": "./datasets/celeba/img_align_celeba",
+        "img_gan_path": "./datasets/celeba/img_align_celeba",
         "n_classes":1000,
         "fid_real_path": "./datasets/celeba/meta/celeba_target_300ids.npy",
         "KNN_real_path": "./datasets/celeba/meta/fea_target_300ids.npy",
