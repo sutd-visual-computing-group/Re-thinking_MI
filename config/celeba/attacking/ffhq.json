@@ -3,7 +3,7 @@
     "dataset":{
         "model_name": "VGG16",
         "test_file_path": "./datasets/celeba/meta/testset.txt",
-        "gan_file_path": "./datasets/ffhq/meta/ganset.txt",
+        "gan_file_path": "./datasets/ffhq/meta/ganset_ffhq.txt",
         "name": "ffhq",
         "img_path": "./datasets/celeba/img_align_celeba",
         "n_classes":1000,
