@@ -61,7 +61,7 @@ SOTA MI attacks work with a general GAN[1]. However, Inversion-Specific GANs[2] 
     ```
 
 ## 3. Learn augmented models
-We provide code to train augmented models (i.e., `efficientnet_b0`, `efficientnet_b1`, and `efficientnet_b3`) from a ***target model***.
+We provide code to train augmented models (i.e., `efficientnet_b0`, `efficientnet_b1`, and `efficientnet_b2`) from a ***target model***.
 * Modify the configuration in
   * `./config/celeba/training_augmodel/celeba.json` if training an augmented model on CelebA
   * `./config/celeba/training_augmodel/ffhq.json` if training an augmented model on FFHQ
